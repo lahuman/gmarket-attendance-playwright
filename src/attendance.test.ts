@@ -20,16 +20,15 @@ test('basic test', async ({ page }) => {
     page.waitForNavigation(/*{ url: 'http://www.gmarket.co.kr/' }*/),
     page.locator('button:has-text("Log In")').first().click()
   ]);
-  // Click text=쿠폰·출첵
 
-  await page.locator('text=쿠폰·출첵').click();
+  // Click img[alt="쿠폰·출첵"]
+  await page.locator('img[alt="쿠폰·출첵"]').click();
   // assert.equal(page.url(), 'http://promotion.gmarket.co.kr/Event/CouponZone.asp');
-  // Click a:has-text("100% 당첨 매일매일 혜택 플러스존")
+  // Click text=플러스존HOT >> span
   const [page1] = await Promise.all([
     page.waitForEvent('popup'),
-    page.locator('a:has-text("100% 당첨 매일매일 혜택 플러스존")').click()
+    page.locator('text=플러스존HOT >> span').click()
   ]);
-
   // Close page
   await page1.close();
   // Click text=룰렛 돌리고 출석체크하고 START!

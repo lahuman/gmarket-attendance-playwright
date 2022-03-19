@@ -1,0 +1,1 @@
+cmd /c "C:\Program Files\Git\bin\bash.exe" --login -i -- E:\03.DEV\gmarket-attendance-playwright\run.sh

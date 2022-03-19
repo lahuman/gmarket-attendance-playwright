@@ -1,0 +1,37 @@
+
+> gmarket-auto-attendance-check@1.0.0 test
+> npx playwright test --config=src/playwright.config.ts
+
+
+Running 1 test using 1 worker
+
+[31m  x  attendance.test.ts:4:1 › basic test[39m[2m (30s)[22m
+
+
+[31m  1) attendance.test.ts:4:1 › basic test [90m===========================================================[31m[39m
+
+    [31mTimeout of 30000ms exceeded.[39m
+
+    Pending operations:
+      - locator.click at src\attendance.test.ts:25:36
+
+    locator.click: Target closed
+    =========================== logs ===========================
+    waiting for selector "text=쿠폰·출첵"
+    ============================================================
+
+      23 |   // Click text=쿠폰·출첵
+      24 |
+    > 25 |   await page.locator('text=쿠폰·출첵').click();
+         |                                    ^
+      26 |   // assert.equal(page.url(), 'http://promotion.gmarket.co.kr/Event/CouponZone.asp');
+      27 |   // Click a:has-text("100% 당첨 매일매일 혜택 플러스존")
+      28 |   const [page1] = await Promise.all([
+
+    [2m    at E:\03.DEV\gmarket-attendance-playwright\src\attendance.test.ts:25:36[22m
+
+[33m  Slow test file: [39mattendance.test.ts[33m (30s)[39m
+[33m  Consider splitting slow test files to speed up parallel execution[39m
+
+[31m  1 failed[39m
+[31m    attendance.test.ts:4:1 › basic test [90m============================================================[31m[39m
