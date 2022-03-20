@@ -41,7 +41,7 @@ test('basic test', async ({ page }) => {
   // Click img[alt="\31 0회이상\ 출석시\ 100\ Smile\ Point"]
   const [page3] = await Promise.all([
     page.waitForEvent('popup'),
-    page.waitForNavigation(/*{ url: 'http://eventnet.gmarket.co.kr/Eventplatform/InterResult?eventWinWay=F&isCallback=False&message=PROMOTION_EVENT_TEXT_45&messageCode=F302&openerUrl=http://promotion.gmarket.co.kr/Event/pluszone.asp&winNo=0&lang=KO&resultCode=302&tif=3F1855D115EA986584E579620C87317879075F74B1FF0133B498B65868B2894EDBDAFD1FAABFBB1F094C57E02384B9B1&isCrossDomain=True&ReloadYn=False&isMobile=N&isGlobalMsg=False&appType=P' }*/),
+    // page.waitForNavigation(/*{ url: 'http://eventnet.gmarket.co.kr/Eventplatform/InterResult?eventWinWay=F&isCallback=False&message=PROMOTION_EVENT_TEXT_45&messageCode=F302&openerUrl=http://promotion.gmarket.co.kr/Event/pluszone.asp&winNo=0&lang=KO&resultCode=302&tif=3F1855D115EA986584E579620C87317879075F74B1FF0133B498B65868B2894EDBDAFD1FAABFBB1F094C57E02384B9B1&isCrossDomain=True&ReloadYn=False&isMobile=N&isGlobalMsg=False&appType=P' }*/),
     page.locator('img[alt="\\31 0회이상\\ 출석시\\ 100\\ Smile\\ Point"]').click()
   ]);
   // Close page
